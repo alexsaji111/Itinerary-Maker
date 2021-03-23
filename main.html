@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Maker FDD</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <!--Header Section Start-->
+    <header>
+        <div class="container bg-darkc">
+            <div class="row row-pad">
+                <div class="col-lg-6 col-md-4 col-3" style="padding-left: 0px;">
+                    <div class="logo"><img src="./images/tripmemo-logo.png" alt=""></div>
+                </div>
+                <div class="col-lg-6 col-md-8 col-9" style="padding-left: 0px; padding-right:0px">
+                    <div class="right__block">
+                        <div class="user drop-down d-flex">
+                            <div class="pic">
+                                <img src="./images/man.jpg" alt="" class="profile-pic">
+                            </div>
+                            <div class="name">
+                                <span class="white d-flex"><b>Dileep PB</b> ,<p class="fs-13 my-auto ml-1 mr-2"><b>IND</b></p> <img src="https://tripmemo.io/uploads/icons/gif1/in.png" alt="" class=" profile-flag"> </span>
+                                <p class="white fs-13 user">dileeppb@gmail.com</p>
+                            </div>
+                            <i class="fa fa-angle-down my-auto ml-15"></i>
+                        </div>
+                        <div class="drop-down__menu-box"> </div>
+                    </div>
+
+                    <div class="notification drop-down">
+                        <div class="dropDown drop-down__button">
+                            <i class="fa fa-bell"></i>
+                            <span class=" ">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header Section end-->
+
+    <!--First section start-->
+    <form id="msform">
+        <!-- progressbar -->
+        <div class="container progress-head">
+            <ul id="progressbar" class="m-0">
+                <li class="bar0 active"><i class="far fa-flag large"></i></li>
+                <li class="bar1"><i class="fas fa-horse-head large"></i></li>
+                <li class="bar2"><i class="far fa-file-alt large"></i></li>
+                <li class="bar3"><i class="fas fa-cog large"></i></li>
+            </ul>
+        </div>
+
+        <!-- fieldsets -->
+        <div class="container">
+            <!-- <fieldset class="stage0">
+                <div class="row flex-column">
+                    <h1 class="fs-18 blue">Step 1</h1>
+                    <p class="text-center">Choose Your Destinations</p>
+                </div> -->
+
+            <!--accordion start-->
+            <!-- <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading-1">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                <div style="overflow: hidden;">
+                                    <h1 class="dayclass fs-14">Day 1</h1>
+                                    <p class="dateclass">18/March/2020</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                            <div class="card-body">
+                                <div class="row mt-2">
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                            <label for="email" class="inputText">Destination</label>
+                                            <select name="Objective" class="form-control border-10">
+                                          <option value="" selected="" disabled=""></option>
+                                          <option value="">Australia</option>
+                                          <option value="">Scotland</option>
+                                          <option value="">Norway</option>
+                                      </select>
+                                        </div>
+                                        <div class="input-group mt-3 flex-form">
+                                            <input type="button" value="Search" class="action-button">
+                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                <div class="sec-1">
+                                                    <h1 class="fs-14 blue">Destination Name</h1>
+                                                    <p>Type goes here</p>
+                                                </div>
+                                                <div class="sec-2">
+                                                    <span class="d-flex pt-2 place fs-13"> <img src="./images/Flag_of_India.svg" alt="" class=" mr-2  flag">Wellshore Resort Group, Orchid Valley,</span>
+                                                    <p>SH 16, Munnnar, Kerala</p>
+
+                                                </div>
+                                                <div class="sec-3">
+                                                    <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                 <p class="fs-14 ">Activities:</p>
+                                   <span class="img-round"><img src="./images/bird.png" alt="" class="ml-4  height-17"></span>
+                                                    <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                    <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                    </span>
+                                                </div>
+                                                <div class="sec-4 mt-2">
+                                                    <span class="d-flex rating-card">
+                                      <p>Rating: </p>
+                                      <i class="fas fa-star  yellow "></i>
+                                      <i class="fas fa-star  yellow "></i>
+                                      <i class="fas fa-star  yellow "></i>
+                                      <i class="fas fa-star  yellow "></i>
+                                      <i class="fas fa-star  gray "></i>
+                                      </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" mt-2">
+                                    <div class="mt-3">
+                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                    </div>
+                                    <hr>
+                                    <div class="mt-2">
+                                        <div class="row mt-4 mb-5">
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                                 <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  gray "></i>
+                                                      </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                               <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  gray "></i>
+                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                             <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  gray "></i>
+                                                  </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                           <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  gray "></i>
+                                                </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accordion-1">
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-1">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-1" aria-expanded="true" aria-controls="collapse-1-1">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Attractions <span class="text-color fw-400">(Add Attractions, Places, etc.)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-1" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-1">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                                <option value="" selected="" disabled="tr"></option>
+                                                <option value="">Australia</option>
+                                                <option value="">Scotland</option>
+                                                <option value="">Norway</option>
+                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                                        <div class="input-group flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test01" checked name="radio-group">
+                                                            <label for="test01" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test02" name="radio-group">
+                                                            <label for="test02" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test03" name="radio-group">
+                                                            <label for="test03" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test04" name="radio-group">
+                                                            <label for="test04" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-2">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-2" aria-expanded="true" aria-controls="collapse-1-2">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Accommodation <span class="text-color fw-400">(Select Accommodation)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-2" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-2">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                                <option value="" selected="" disabled="tr"></option>
+                                                <option value="">Australia</option>
+                                                <option value="">Scotland</option>
+                                                <option value="">Norway</option>
+                                            </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Accommodation</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                                <option value="" selected="" disabled="tr"></option>
+                                                <option value="">Australia</option>
+                                                <option value="">Scotland</option>
+                                                <option value="">Norway</option>
+                                            </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                        <div class="form-group radio-date px-0">
+                                                            <span class="py-4 mt-1">
+                                              <input type="radio" id="test11" checked name="radio-group">
+                                              <label for="test11" class="fs-14">I prefer to stay in this accommodation</label>
+                                          </span>
+                                                            <span class="py-4 mt-1">
+                                              <p>OR</p>
+                                          </span>
+                                                            <span class="py-4 mt-1">
+                                              <input type="radio" id="test31" name="radio-group">
+                                              <label for="test31" class="fs-14">Similar</label>
+                                          </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                                <div class="sec-1">
+                                                                    <h1 class="fs-14 blue">The Village Melbourne</h1>
+                                                                </div>
+                                                                <div class="sec-3">
+                                                                    <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" mt-2">
+                                                    <div class="mt-3">
+                                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="mt-2">
+                                                        <div class="row mt-4 mb-5">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                                <i class="fas fa-star  yellow "></i>
+                                                                <i class="fas fa-star  yellow "></i>
+                                                                <i class="fas fa-star  yellow "></i>
+                                                                <i class="fas fa-star  yellow "></i>
+                                                                <i class="fas fa-star  gray "></i>
+                                                                </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  gray "></i>
+                                                            </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  gray "></i>
+                                                          </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  gray "></i>
+                                                        </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="row mt-2">
+                                                        <h1 class="blue fs-14 text-left">Notes</h1>
+                                                        <textarea name="" id="" cols="" rows="3" placeholder="Your note goes here..."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading-1">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapse-2" aria-expanded="true" aria-controls="collapse-1">
+                                <div style="overflow: hidden;">
+                                    <h1 class="dayclass fs-14">Day 2</h1>
+                                    <p class="dateclass">18/March/2020</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                            <div class="card-body">
+                                <div class="row mt-2">
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                            <label for="email" class="inputText">Destination</label>
+                                            <select name="Objective" class="form-control border-10">
+                                        <option value="" selected="" disabled=""></option>
+                                        <option value="">Australia</option>
+                                        <option value="">Scotland</option>
+                                        <option value="">Norway</option>
+                                    </select>
+                                        </div>
+                                        <div class="input-group mt-3 flex-form">
+                                            <input type="button" value="Search" class="action-button">
+                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                <div class="sec-1">
+                                                    <h1 class="fs-14 blue">Destination Name</h1>
+                                                    <p>Type goes here</p>
+                                                </div>
+                                                <div class="sec-2">
+                                                    <span class="d-flex pt-2 place fs-13"> <img src="./images/Flag_of_India.svg" alt="" class=" mr-2  flag">Wellshore Resort Group, Orchid Valley,</span>
+                                                    <p>SH 16, Munnnar, Kerala</p>
+
+                                                </div>
+                                                <div class="sec-3">
+                                                    <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                               <p class="fs-14 ">Activities:</p>
+                                 <span class="img-round"><img src="./images/bird.png" alt="" class="ml-4  height-17"></span>
+                                                    <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                    <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                    </span>
+                                                </div>
+                                                <div class="sec-4 mt-2">
+                                                    <span class="d-flex rating-card">
+                                    <p>Rating: </p>
+                                    <i class="fas fa-star  yellow "></i>
+                                    <i class="fas fa-star  yellow "></i>
+                                    <i class="fas fa-star  yellow "></i>
+                                    <i class="fas fa-star  yellow "></i>
+                                    <i class="fas fa-star  gray "></i>
+                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" mt-2">
+                                    <div class="mt-3">
+                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                    </div>
+                                    <hr>
+                                    <div class="mt-2">
+                                        <div class="row mt-4 mb-5">
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                               <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  gray "></i>
+                                                    </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                             <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  gray "></i>
+                                                  </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                           <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  gray "></i>
+                                                </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                         <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  gray "></i>
+                                              </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accordion-1">
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-1">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-1" aria-expanded="true" aria-controls="collapse-1-1">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Attractions <span class="text-color fw-400">(Add Attractions, Places, etc.)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-1" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-1">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                              <option value="" selected="" disabled="tr"></option>
+                                              <option value="">Australia</option>
+                                              <option value="">Scotland</option>
+                                              <option value="">Norway</option>
+                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test01" checked name="radio-group">
+                                                            <label for="test01" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test02" name="radio-group">
+                                                            <label for="test02" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test03" name="radio-group">
+                                                            <label for="test03" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test04" name="radio-group">
+                                                            <label for="test04" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-2">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-2" aria-expanded="true" aria-controls="collapse-1-2">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Accommodation <span class="text-color fw-400">(Select Accommodation)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-2" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-2">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                              <option value="" selected="" disabled="tr"></option>
+                                              <option value="">Australia</option>
+                                              <option value="">Scotland</option>
+                                              <option value="">Norway</option>
+                                          </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Accommodation</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                              <option value="" selected="" disabled="tr"></option>
+                                              <option value="">Australia</option>
+                                              <option value="">Scotland</option>
+                                              <option value="">Norway</option>
+                                          </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                        <div class="form-group radio-date">
+                                                            <span class="py-4 mt-1">
+                                            <input type="radio" id="test11" checked name="radio-group">
+                                            <label for="test11" class="fs-14">I prefer to stay in this accommodation</label>
+                                        </span>
+                                                            <span class="py-4 mt-1">
+                                            <p>OR</p>
+                                        </span>
+                                                            <span class="py-4 mt-1">
+                                            <input type="radio" id="test31" name="radio-group">
+                                            <label for="test31" class="fs-14">Similar</label>
+                                        </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                                <div class="sec-1">
+                                                                    <h1 class="fs-14">The Village Melbourne</h1>
+                                                                </div>
+                                                                <div class="sec-2">
+                                                                    <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" mt-2">
+                                                    <div class="mt-3">
+                                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="mt-2">
+                                                        <div class="row mt-4 mb-5">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                              <i class="fas fa-star  yellow "></i>
+                                                              <i class="fas fa-star  yellow "></i>
+                                                              <i class="fas fa-star  yellow "></i>
+                                                              <i class="fas fa-star  yellow "></i>
+                                                              <i class="fas fa-star  gray "></i>
+                                                              </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  yellow "></i>
+                                                          <i class="fas fa-star  gray "></i>
+                                                          </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  gray "></i>
+                                                        </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  gray "></i>
+                                                      </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="row mt-2">
+                                                        <h1 class="blue fs-14 text-left">Notes</h1>
+                                                        <textarea name="" id="" cols="" rows="3" placeholder="Your note goes here..."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="heading-1">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapse-3" aria-expanded="true" aria-controls="collapse-1">
+                                <div style="overflow: hidden;">
+                                    <h1 class="dayclass fs-14">Day 3</h1>
+                                    <p class="dateclass">18/March/2020</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+                            <div class="card-body">
+                                <div class="row mt-2">
+                                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                            <label for="email" class="inputText">Destination</label>
+                                            <select name="Objective" class="form-control border-10">
+                                      <option value="" selected="" disabled=""></option>
+                                      <option value="">Australia</option>
+                                      <option value="">Scotland</option>
+                                      <option value="">Norway</option>
+                                  </select>
+                                        </div>
+                                        <div class="input-group mt-3 flex-form">
+                                            <input type="button" value="Search" class="action-button">
+                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                <div class="sec-1">
+                                                    <h1 class="fs-14 blue">Destination Name</h1>
+                                                    <p>Type goes here</p>
+                                                </div>
+                                                <div class="sec-2">
+                                                    <span class="d-flex pt-2 place fs-13"> <img src="./images/Flag_of_India.svg" alt="" class=" mr-2  flag">Wellshore Resort Group, Orchid Valley,</span>
+                                                    <p>SH 16, Munnnar, Kerala</p>
+
+                                                </div>
+                                                <div class="sec-3">
+                                                    <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                             <p class="fs-14 ">Activities:</p>
+                               <span class="img-round"><img src="./images/bird.png" alt="" class="ml-4  height-17"></span>
+                                                    <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                    <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                    </span>
+                                                </div>
+                                                <div class="sec-4 mt-2">
+                                                    <span class="d-flex rating-card">
+                                  <p>Rating: </p>
+                                  <i class="fas fa-star  yellow "></i>
+                                  <i class="fas fa-star  yellow "></i>
+                                  <i class="fas fa-star  yellow "></i>
+                                  <i class="fas fa-star  yellow "></i>
+                                  <i class="fas fa-star  gray "></i>
+                                  </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" mt-2">
+                                    <div class="mt-3">
+                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                    </div>
+                                    <hr>
+                                    <div class="mt-2">
+                                        <div class="row mt-4 mb-5">
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                             <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  yellow "></i>
+                                                  <i class="fas fa-star  gray "></i>
+                                                  </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                           <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  yellow "></i>
+                                                <i class="fas fa-star  gray "></i>
+                                                </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                         <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  yellow "></i>
+                                              <i class="fas fa-star  gray "></i>
+                                              </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="card-1">
+                                                    <div class="card-head d-flex justify-content-between">
+                                                        <p class="fs-14 fw-600">Title Goes Here</p>
+                                                        <p class="fs-13 blue">50% Matching</p>
+                                                    </div>
+                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                    <div class="card-block">
+                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                        <p class="card-text"><img src="./images/Flag_of_India.svg" class="flag" alt=""> Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala
+                                                        </p>
+                                                        <div class="sec-3">
+                                                            <span class="fs-13 flag-img1 w-100 d-flex align-items-center mt-2">
+                                       <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                                            <span class="img-round"> <img src="./images/butterfly.png" alt="" class="height-17"> </span>
+                                                            <span class="img-round"> <img src="./images/fish.png" alt="" class="height-17"></span>
+                                                            </span>
+                                                        </div>
+                                                        <div class="card-footer mt-2 d-flex justify-content-between">
+                                                            <p><i class="fas fa-map-marker-alt mr-2 red"></i><span class="blue fs-13">75 km</span></p>
+                                                            <span class="d-flex rating-card">
+                                            <i class="fas fa-star  yellow "></i>
+                                            <i class="fas fa-star  yellow "></i>
+                                            <i class="fas fa-star  yellow "></i>
+                                            <i class="fas fa-star  yellow "></i>
+                                            <i class="fas fa-star  gray "></i>
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accordion-1">
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-1">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-1" aria-expanded="true" aria-controls="collapse-1-1">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Attractions <span class="text-color fw-400">(Add Attractions, Places, etc.)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-1" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-1">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                            <option value="" selected="" disabled="tr"></option>
+                                            <option value="">Australia</option>
+                                            <option value="">Scotland</option>
+                                            <option value="">Norway</option>
+                                        </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-2">
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test01" checked name="radio-group">
+                                                            <label for="test01" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test02" name="radio-group">
+                                                            <label for="test02" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test03" name="radio-group">
+                                                            <label for="test03" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-12">
+                                                        <div class="main-attraction">
+                                                            <img src="./images/surfing.png" class="img-fluid attraction border-10" alt="">
+                                                        </div>
+                                                        <div class="attraction-txt mb-3 d-flex justify-content-between align-items-center">
+                                                            <p class="pt-3">Title Goes Here</p>
+                                                            <input type="radio" class="pt-2" id="test04" name="radio-group">
+                                                            <label for="test04" class="fs-14"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="heading-1-2">
+                                            <a class="card-link" data-toggle="collapse" href="#collapse-1-2" aria-expanded="true" aria-controls="collapse-1-2">
+                                                <div style="overflow: hidden;">
+                                                    <i class="fas fa-horse-head large"></i>
+                                                    <h1 class="dayclass fs-14">Accommodation <span class="text-color fw-400">(Select Accommodation)</span></h1>
+                                                    <p class="dateclass"></p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="collapse-1-2" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-2">
+                                            <div class="card-body">
+                                                <div class="row mt-2">
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Destination</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                            <option value="" selected="" disabled="tr"></option>
+                                            <option value="">Australia</option>
+                                            <option value="">Scotland</option>
+                                            <option value="">Norway</option>
+                                        </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 pb-modalreglog-input-group textOnInput">
+                                                            <label for="email" class="inputText">Accommodation</label>
+                                                            <select name="Objective" class="form-control border-10">
+                                            <option value="" selected="" disabled="tr"></option>
+                                            <option value="">Australia</option>
+                                            <option value="">Scotland</option>
+                                            <option value="">Norway</option>
+                                        </select>
+                                                        </div>
+                                                        <div class="input-group mt-4 flex-form">
+                                                            <input type="button" value="Search" class="action-button">
+                                                            <p class="flex-form">Add New Destination <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                                                        </div>
+                                                        <div class="form-group radio-date">
+                                                            <span class="py-4 mt-1">
+                                          <input type="radio" id="test11" checked name="radio-group">
+                                          <label for="test11" class="fs-14">I prefer to stay in this accommodation</label>
+                                      </span>
+                                                            <span class="py-4 mt-1">
+                                          <p>OR</p>
+                                      </span>
+                                                            <span class="py-4 mt-1">
+                                          <input type="radio" id="test31" name="radio-group">
+                                          <label for="test31" class="fs-14">Similar</label>
+                                      </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                                <img src="./images/surfing.png" class="desc-img" alt="">
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-sm-6 description">
+                                                                <div class="sec-1">
+                                                                    <h1 class="fs-14">The Village Melbourne</h1>
+                                                                </div>
+                                                                <div class="sec-2">
+                                                                    <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                    <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" mt-2">
+                                                    <div class="mt-3">
+                                                        <h1 class="fs-14 blue text-left pt-4">Nearby Suggestions</h1>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="mt-2">
+                                                        <div class="row mt-4 mb-5">
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  yellow "></i>
+                                                            <i class="fas fa-star  gray "></i>
+                                                            </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  yellow "></i>
+                                                        <i class="fas fa-star  gray "></i>
+                                                        </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  yellow "></i>
+                                                      <i class="fas fa-star  gray "></i>
+                                                      </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                                <div class="card-1">
+                                                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                                                    <div class="card-block">
+                                                                        <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                                                        <div class="mt-2 d-flex justify-content-between">
+                                                                            <p><span class="fs-14">Rating</span></p>
+                                                                            <span class="d-flex rating-card">
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  yellow "></i>
+                                                    <i class="fas fa-star  gray "></i>
+                                                    </span>
+                                                                        </div>
+                                                                        <div class="sec-2">
+                                                                            <p class=" pt-2 fs-14 pt-2"><i class="fas fa-map-marker-alt mr-2 red"></i>Wellshore Resort Group, Orchid Valley, SH 16, Munnnar, Kerala</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-phone blue mr-2"></i>+91 9874563210</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-utensils blue mr-2"></i>Hotel and Resort</p>
+                                                                            <p class="fs-14 pt-2"><i class="fas fa-concierge-bell blue mr-2"></i></i>Room With Service</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="row mt-2">
+                                                        <h1 class="blue fs-14 text-left">Notes</h1>
+                                                        <textarea name="" id="" cols="" rows="3" placeholder="Your note goes here..."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mt-3 flex-form save-input">
+                    <span> <i class="fas fa-angle-left back-btn"></i><a href="./index.html"><input type="button" name="next" class="action-button" value="Back" /></a></span>
+                    <span> <input type="button" name="next" class="next action-button" value="Save & Continue" /><i class="fas fa-angle-right save-btn"></i></span>
+                </div>
+            </fieldset> -->
+            <!-- <fieldset class="stage1">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h1 class="fs-18 blue">Step 3</h1>
+                        <p class="text-center">Species to see</p>
+                    </div>
+                    <div class="col">
+                        <input type="button" value="Skip" class="skip-button  float-right">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
+                        <p class="blue">Add Species</p>
+                        <p class="">Add New Species <img src="./images/add sign.png" class="img-sec" alt=""></p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                            <label for="email" class="inputText">Search Here</label>
+                            <select name="Objective" class="form-control border-10">
+                <option value="" selected="" disabled="tr"></option>
+                <option value="">Birds</option>
+                <option value="">Fishes</option>
+                <option value="">Mammals</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-9">
+                                <input type="text" class="form-control" id="start" placeholder="Search">
+                            </div>
+                            <div class="col-3">
+                                <input type="button" value="Search" class="action-button mt-0 mr-0 float-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-12 col-md-12">
+                        <p class="fs-14 blue">Birds</p>
+                        <hr>
+                        <div class="row px-3 justify-content-between">
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/bird.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-12 col-md-12">
+                        <p class="fs-14 blue">Mammals</p>
+                        <hr>
+                        <div class="row px-3 justify-content-between">
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/elephant.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/elephant.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/elephant.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                            <div class="box  d-flex">
+                                <span class="img-round"><img src="./images/elephant.png" alt="" class="height-17"></span>
+                                <span>
+                                    <p>English Name</p>
+                                    <p class="fs-12 light-gray">Scientific Name</p>
+                                </span>
+                                <i class="fas fa-times blue ml-3 close-chk close-btn"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="input-group mt-3 flex-form save-input">
+                    <div class="">
+                        <span class=""> <i class="fas fa-angle-left back-btn"></i><input type="button" name="previous" class="previous action-button" value="Back" /></span>
+                    </div>
+                    <div class="">
+                        <span class=""><input type="button" name="next" class="next skip-button" value="Skip" /></span>
+                        <span class=""> <input type="button" name="next" class="next action-button" value="Save & Continue" /><i class="fas fa-angle-right save-btn"></i></span>
+                    </div>
+                </div>
+
+            </fieldset> -->
+            <!-- <fieldset class="stage2">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h1 class="fs-18 blue">Step 4</h1>
+                        <p class="text-center">Species to see</p>
+                    </div>
+                    <div class="col">
+                        <input type="button" value="Skip" class="next skip-button float-right">
+                    </div>
+                </div>
+                <form action="" method="post">
+                    <div class="row mt-3">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between mb-0">
+                            <p class="blue"><img src="./images/Flag_of_India.svg" class="mr-1" height="15" alt=""><span class="blue">Kerala</span></p>
+                            <p class="">Add New<img src="./images/add sign.png" class="img-sec" alt=""></p>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="row mt-4 mb-5">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test44" checked="" name="radio-group">
+                                    <label for="test44" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test22" name="radio-group">
+                                    <label for="test22" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test33" name="radio-group">
+                                    <label for="test33" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test55" name="radio-group">
+                                    <label for="test55" class="fs-14"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form action="post">
+                    <div class="row mt-3">
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between mb-0">
+                            <p class="blue"><img src="./images/Flag_of_India.svg" class="mr-1" height="15" alt=""><span class="blue">Tamilnadu</span></p>
+                            <p class="">Add New<img src="./images/add sign.png" class="img-sec" alt=""></p>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="row mt-4 mb-5">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test44" checked="" name="radio-group">
+                                    <label for="test44" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test66" name="radio-group">
+                                    <label for="test66" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test77" name="radio-group">
+                                    <label for="test77" class="fs-14"></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
+                                <div class="card-1">
+                                    <img class="card-img-top img-fluid" src="./images/surfing.png" alt="Card image cap">
+                                    <div class="card-block">
+                                        <div class="d-flex">
+                                            <p class="card-title fw-600 pt-2">Type Goes Here</p>
+                                        </div>
+                                        <div class="mt-2 d-flex justify-content-between">
+                                            <p><span class="fs-14">Rating</span></p>
+                                            <span class="d-flex rating-card">
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  yellow "></i>
+                    <i class="fas fa-star  gray "></i>
+                    </span>
+                                        </div>
+                                        <div class="mt-2">
+                                            <div class="d-flex justify-content-between pb-1">
+                                                <p class="fs-14">Country</p>
+                                                <span class="d-flex rating-card"><img src="./images/Flag_of_India.svg" class="img-sec mr-1" alt="">Kerala, India</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="fs-14">Added By</p>
+                                                <p>Pradhamesh Redde</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="attraction-txt d-flex justify-content-between align-items-center mb-3">
+                                    <input type="radio" class="pt-2" id="test88" name="radio-group">
+                                    <label for="test88" class="fs-14"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mt-3 flex-form save-input">
+                        <div class="">
+                            <i class="fas fa-angle-left back-btn"></i><input type="button" name="previous" class="previous action-button" value="Back" />
+                        </div>
+                        <div class="">
+                            <span class=""><input type="button" name="next" class="next skip-button" value="Skip" /></span>
+                            <span class=""> <input type="button" name="next" class="next action-button" value="Save & Continue" /><i class="fas fa-angle-right save-btn"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </fieldset> -->
+            <fieldset class="stage3">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h1 class="fs-18 blue">Step 6</h1>
+                        <p class="text-center">General</p>
+                    </div>
+                    <div class="col">
+                        <input type="button" value="Skip" class="next skip-button  float-right">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <div class="input-group pb-modalreglog-input-group textOnInput">
+                            <label for="email" class="inputText">Difficult Level</label>
+                            <select name="Objective" class="form-control border-10">
+                <option value="" selected="" disabled="tr">Medium</option>
+                <option value="">Hard</option>
+                <option value="">Medium</option>
+                <option value="">Easy</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <div class="col-4 input-container mt-3 px-0">
+                                <p>Temperature</p>
+                            </div>
+                            <div class="col-4 input-container mt-3 px-0">
+                                <i class="fas fa-long-arrow-alt-up px-3 forest-green"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value temp"></label>
+                            </div>
+                            <div class="col-4 input-container mt-3 px-0">
+                                <i class="fas fa-long-arrow-alt-down px-3 red"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value temp"></label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="col-4 input-container mt-3 px-0">
+                                <p>Altitude</p>
+                            </div>
+                            <div class="col-4 input-container mt-3 px-0">
+                                <i class="fas fa-long-arrow-alt-up px-3 forest-green"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value">ft</label>
+                            </div>
+                            <div class="col-4 input-container mt-3 px-0">
+                                <i class="fas fa-long-arrow-alt-down px-3 red"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value">ft</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                        <div class="input-group pb-modalreglog-input-group textOnInput" style="visibility: hidden;">
+                            <label for="email" class="inputText">Difficult Level</label>
+                            <select name="Objective" class="form-control border-10">
+                <option value="" selected="" disabled="tr"></option>
+                <option value="">Birds</option>
+                <option value="">Fishes</option>
+                <option value="">Mammals</option>
+                            </select>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <div class="col-4 input-container mt-3 px-0">
+                                <p>Rain Probability</p>
+                            </div>
+                            <div class="col-6 input-container mt-3 px-0 ">
+                                <i class="fas fa-cloud-showers-heavy blue"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value">%</label>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <div class="col-4 input-container mt-3 px-0">
+                                <p>No. Of Long Drives</p>
+                            </div>
+                            <div class="col-6 input-container mt-3 px-0">
+                                <i class="fas fa-route blue"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value">%</label>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <div class="col-4 input-container mt-3 px-0">
+                                <p>Snowing Probability</p>
+                            </div>
+                            <div class="col-6 input-container mt-3 px-0">
+                                <i class="far fa-snowflake blue"></i>
+                                <input type="text" placeholder="" class="form-control mb-0" id="youridhere">
+                                <label for="youridhere" class="static-value">%</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-12 demo1">
+                        <p class="blue pb-3">Suggested items to carry</p>
+                        <hr>
+                        <div class=" property-detail box-list">
+                            <div class="d-flex">
+                                <input type="text" class="add-check-field form-control mt-0 w-50" id="myText2" value=" " placeholder="">
+                                <input type="button" name="next" class="verify add-check action-button mt-0 ml-3" value="Add Category">
+                            </div>
+                            <div class="box-list-item">
+                                <label><input type="checkbox" name="Cuisine1" value="Italian"><span>Catrgory 1</span> </label>
+                                <label><input type="checkbox" name="Cuisine2" value="Spanish"><span>Catrgory 2</span>  </label>
+                                <label><input type="checkbox" name="Cuisine3" value="Chineese"><span>Catrgory 3</span> </label>
+                                <label><input type="checkbox" name="Cuisine4" value="Indian"><span>Catrgory 4</span> </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row mt-3 mx-0">
+                    <div class="col-lg-6 mb-3">
+                        <div class="row justify-content-between">
+                            <p>Suitable for specially abled</p>
+                            <input type="radio" id="test10" checked name="radio-group">
+                            <label for="test10" class="fs-14"></label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <div class="row justify-content-between">
+                            <p>Wheelchair Friendly</p>
+                            <input type="radio" id="test20" name="radio-group">
+                            <label for="test20" class="fs-14"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-12">
+                        <p class="blue">Includes</p>
+                        <hr>
+                        <textarea name="description" id="" cols="" rows="" placeholder="Write here"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="blue">Excludes</p>
+                        <hr>
+                        <textarea name="description" id="" cols="" rows="" placeholder="Write here"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="blue">Terms & Conditions</p>
+                        <hr>
+                        <textarea name="description" id="" cols="" rows="" placeholder="Write here"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="blue">Privacy Policy</p>
+                        <hr>
+                        <textarea name="description" id="" cols="" rows="" placeholder="Write here"></textarea>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="blue">Notes</p>
+                        <hr>
+                        <textarea name="description" id="" cols="" rows="" placeholder="Write here"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="input-group mt-3 flex-form save-input">
+                    <div class="">
+                        <span class=""> <i class="fas fa-angle-left back-btn"></i><input type="button" name="previous" class="previous action-button" value="Back" /></span>
+                    </div>
+                    <div class="">
+                        <span class=""><input type="button" name="next" class="next skip-button" value="Skip" /></span>
+                        <span class=""> <input type="button" name="next" class="next action-button" value="Get Overview" /><i class="fas fa-angle-right save-btn"></i></span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <!--First Section end-->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
