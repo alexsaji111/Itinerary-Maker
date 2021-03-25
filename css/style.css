@@ -3,14 +3,19 @@ body {
     width: 100%;
     overflow-x: hidden;
     font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px !important;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+a {
+    color: #212529;
 }
 
 header {
@@ -35,6 +40,18 @@ li {
 
 .border-outline {
     border-bottom: 1px solid #d6d3d3;
+}
+
+.border-outline-top {
+    border-top: 1px solid #d6d3d3;
+}
+
+.border-outline-light {
+    border-bottom: 1px solid #e8e9ea;
+}
+
+.border-outline-gray {
+    border-bottom: 1px solid #8e8e8e;
 }
 
 .px-space {
@@ -80,6 +97,14 @@ li {
 
 .red {
     color: red;
+}
+
+#msform .white {
+    color: #fff;
+}
+
+.dark-blue {
+    color: #0071bc;
 }
 
 .corner-round {
@@ -133,6 +158,10 @@ p {
 
 .fw-800 {
     font-weight: 800;
+}
+
+.fs-italic {
+    font-style: italic;
 }
 
 .border-10 {
@@ -325,7 +354,7 @@ progress {
 }
 
 
-/*=====First Section=====*/
+/*=====Index html Section=====*/
 
 .bak-maker {
     background: #f2f2f2;
@@ -356,9 +385,6 @@ select:focus {
     border-color: none;
     box-shadow: none;
 }
-
-
-/*======second section======*/
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -493,7 +519,6 @@ select:focus {
     border-radius: 10px;
     cursor: pointer;
     padding: .5rem 2rem;
-    margin: 10px 5px;
 }
 
 #msform .action-button:hover,
@@ -519,7 +544,7 @@ select:focus {
 
 #msform .edit-button {
     width: auto;
-    background: #666;
+    background: #333;
     color: #fff;
     border: 0 none;
     border-radius: 10px;
@@ -530,7 +555,7 @@ select:focus {
 
 #msform .edit-button:hover,
 #msform .edit-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #666;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #333;
 }
 
 
@@ -553,10 +578,15 @@ select:focus {
 
 /*progressbar*/
 
+.progress-head {
+    background: #f2f2f2;
+    opacity: .99;
+}
+
 #progressbar {
     padding-top: 4rem;
+    padding-bottom: 1rem;
     padding-left: 0;
-    z-index: 3 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -591,6 +621,7 @@ select:focus {
     position: relative;
     top: -35px;
     font-size: 20px;
+    z-index: 999 !important;
 }
 
 
@@ -604,8 +635,7 @@ select:focus {
     position: absolute;
     left: -50%;
     top: 18px;
-    z-index: -1;
-    /*put it behind the numbers*/
+    z-index: -1 !important;
 }
 
 #progressbar li:first-child:after {
@@ -934,11 +964,16 @@ p {
 }
 
 
-/*=====Overview section=====*/
+/*=====Overview html section=====*/
 
 .box1 {
     background: #1bbc9b;
     color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.box-quote {
     padding: 1rem;
     border-radius: 10px;
 }
@@ -1002,3 +1037,89 @@ table td,
 th {
     padding: 10px;
 }
+
+
+/*====Invoice html Section====*/
+
+.container-box {
+    background: #666;
+    color: #fff;
+    padding: 1rem;
+}
+
+.band {
+    background: #ffeff1;
+    padding: 1rem;
+    margin-top: 2px;
+}
+
+.band-white {
+    background: #fff;
+    padding: 1rem;
+    margin-top: 2px;
+}
+
+.band p,
+.band-sec {
+    background: #fff;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    width: 200px;
+    border: 1px solid #e8e9ea;
+}
+
+.band .band-sec {
+    text-align: right;
+    margin-right: 1.5rem;
+}
+
+.band .band-sec i {
+    position: absolute;
+    font-size: 20px;
+    right: 1%;
+}
+
+.personal-band {
+    background: none !important;
+    border: none !important;
+    padding-left: 0px !important;
+}
+
+.total-band {
+    background: #ffdae0;
+    margin-top: 0;
+}
+
+.invoice-box {
+    background: #f2f2f2;
+    padding: .8rem;
+    border-radius: 10px;
+}
+
+.invoice-table th,
+td {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.invoice-table .first-child {
+    text-align: left;
+}
+
+.invoice-table .last-child {
+    text-align: right;
+}
+
+.invoice-table {
+    position: relative;
+}
+
+.invoice-table .dollar {
+    position: absolute;
+    right: 10%;
+}
+
+
+/* * {
+    border: 1px solid red;
+} */

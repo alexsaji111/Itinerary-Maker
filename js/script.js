@@ -1,3 +1,5 @@
+/*progress bar*/
+
 let actual = 0;
 let previous = 0;
 
@@ -31,7 +33,7 @@ $(".previous").click(function() {
     }
 });
 
-
+/*Add content*/
 $('.add-check').click(function() {
     var valu = $(this).siblings('.add-check-field').val();
     console.log(valu);
