@@ -1,3 +1,5 @@
+/*progress bar*/
+
 let actual = 0;
 let previous = 0;
 
@@ -31,7 +33,7 @@ $(".previous").click(function() {
     }
 });
 
-
+/*Add content*/
 $('.add-check').click(function() {
     var valu = $(this).siblings('.add-check-field').val();
     console.log(valu);
@@ -44,3 +46,5 @@ $('.add-check-service').click(function() {
     $(this).parent().parent().children('.demo1 .box-list-item').append("<label><input type='checkbox' name='services" + valu + "' value=" + valu + " /><span>" + valu + "</span> </label>");
 
 });
+
+/*date range picker*/
