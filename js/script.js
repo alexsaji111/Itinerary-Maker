@@ -46,5 +46,3 @@ $('.add-check-service').click(function() {
     $(this).parent().parent().children('.demo1 .box-list-item').append("<label><input type='checkbox' name='services" + valu + "' value=" + valu + " /><span>" + valu + "</span> </label>");
 
 });
-
-/*date range picker*/
