@@ -1,6 +1,19 @@
+@media (min-width:1440px) {
+    .container-fluid {
+        max-width: 1540px;
+    }
+}
+
 @media (max-width:1024px) {
     .more {
         margin-top: 10px !important;
+    }
+    .carousel-caption {
+        text-align: start !important;
+        left: 14px !important;
+        right: 0 !important;
+        bottom: 3px !important;
+        width: 291px;
     }
 }
 
@@ -15,6 +28,17 @@
         position: absolute;
         right: 15%;
     }
+    .carousel-caption {
+        text-align: start !important;
+        left: 16px !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px 10px !important;
+        width: 300px;
+        background: #eae9e6de;
+    }
 }
 
 @media (max-width: 575px) {
@@ -24,11 +48,5 @@
     .invoice-table .dollar {
         position: absolute;
         right: 20%;
-    }
-}
-
-@media (min-width:1440px) {
-    .container-fluid {
-        max-width: 1540px;
     }
 }

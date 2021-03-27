@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 body {
     width: 100%;
-    overflow-x: hidden;
     font-family: 'Open Sans', sans-serif !important;
     font-size: 14px !important;
 }
@@ -203,6 +202,10 @@ textarea.form-control {
     font-size: 14px;
 }
 
+input.invoice-txt::placeholder {
+    text-align: right;
+}
+
 
 /*=====Header Section======*/
 
@@ -386,6 +389,9 @@ select:focus {
     box-shadow: none;
 }
 
+
+/*radio button styling*/
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
@@ -436,6 +442,64 @@ select:focus {
 }
 
 [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/*checkbox styling*/
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="checkbox"]:checked+label,
+[type="checkbox"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+[type="checkbox"]:checked+label:before,
+[type="checkbox"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #00c0b5;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="checkbox"]:checked+label:after,
+[type="checkbox"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #00c0b5;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -523,6 +587,8 @@ select:focus {
 
 #msform .action-button:hover,
 #msform .action-button:focus {
+    -moz-box-shadow: 0 0 0 2px white, 0 0 0 3px #00c0b5;
+    -webkit-box-shadow: 0 0 0 2px white, 0 0 0 3px #00c0b5;
     box-shadow: 0 0 0 2px white, 0 0 0 3px #00c0b5;
 }
 
@@ -539,6 +605,8 @@ select:focus {
 
 #msform .skip-button:hover,
 #msform .skip-button:focus {
+    -moz-box-shadow: 0 0 0 2px white, 0 0 0 3px #fecd07;
+    -webkit-box-shadow: 0 0 0 2px white, 0 0 0 3px #fecd07;
     box-shadow: 0 0 0 2px white, 0 0 0 3px #fecd07;
 }
 
@@ -556,6 +624,20 @@ select:focus {
 #msform .edit-button:hover,
 #msform .edit-button:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #333;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    top: -2px;
+    right: 15px;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #ccc;
 }
 
 
@@ -646,6 +728,23 @@ select:focus {
 #progressbar li.active:after {
     background: #1bbc9b;
     color: white;
+}
+
+.att-icon {
+    background: #666;
+    border-radius: 50%;
+    width: 30px;
+    padding: 5px;
+    margin-right: 6px;
+    color: white;
+    height: 30px;
+}
+
+.att-icon i {
+    position: relative;
+    top: 6px;
+    color: #fff;
+    left: 5px;
 }
 
 
@@ -853,27 +952,28 @@ p {
 
 .box {
     border: 1px solid #ced4da;
-    padding: .6rem 1rem;
+    padding: .6rem 3rem .6rem 1rem;
     border-radius: 10px;
     margin: 1rem 0px;
+    position: relative;
 }
 
 .box img {
-    position: relative;
+    margin-top: 4px;
     margin-right: 10px;
-    top: 12%;
 }
 
 .box i {
-    position: relative;
-    top: -62%;
-    right: -18%;
-    padding: 6px;
+    position: absolute;
+    top: -22%;
+    right: -7%;
+    padding: 7px;
     background-color: #fff;
     border-radius: 50%;
     border: 1px solid #ced4da;
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 .input-container .static-value {
@@ -1051,6 +1151,7 @@ th {
     background: #ffeff1;
     padding: 1rem;
     margin-top: 2px;
+    position: relative;
 }
 
 .band-white {
@@ -1073,10 +1174,12 @@ th {
     margin-right: 1.5rem;
 }
 
-.band .band-sec i {
+.band .invoice-close {
     position: absolute;
     font-size: 20px;
     right: 1%;
+    top: 31%;
+    cursor: pointer;
 }
 
 .personal-band {
@@ -1119,7 +1222,10 @@ td {
     right: 10%;
 }
 
-
-/* * {
-    border: 1px solid red;
-} */
+#addinvoice,
+#addspecies,
+#addattractions,
+#addattractions1,
+#addattractions2 {
+    cursor: pointer;
+}
